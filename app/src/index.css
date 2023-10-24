@@ -1,38 +1,70 @@
 body {
-  background-color: #eee;
+  background-color: #021522; /* Dark cobalt blue */
   display: flex;
   font-family: 'Muli', sans-serif;
+  color: #1be9b5; /* Neon green */
 }
 
 .contract, .existing-contracts {
   margin: 20px;
   display: inline-block;
   padding: 40px;
-  border: 1px solid #ddd;
-  background-color: #fff;
+  border: 1px solid #1be9b5; /* Neon green border */
+  background-color: rgba(2, 13, 20, 0.8); /* Slightly transparent background */
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px; /* space between the divs */
 }
 
 h1 {
   margin: 10px;
   padding: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #1be9b5; /* Neon green border */
 }
 
 label {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
-  color: #aaa;
   margin: 20px;
+}
+
+/* Different neon colors for labels */
+label:nth-child(4) {
+  color: #1be9b5; /* Neon green */
+  text-shadow: 0 0 5px #1be9b5, 0 0 10px #1be9b5, 0 0 15px #db28db, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+}
+
+label:nth-child(2) {
+  color: #d378f7; /* Neon pink */
+  text-shadow: 0 0 5px #1be9b5, 0 0 10px #1be9b5, 0 0 15px #db28db, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
+}
+
+label:nth-child(3) {
+  color: #21e1fa; /* Neon blue */
+  text-shadow: 0 0 5px #1be9b5, 0 0 10px #1be9b5, 0 0 15px #db28db, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff, 0 0 35px #ff00ff;
 }
 
 input[type="text"] {
   padding: 6px;
   font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+  border: 1px solid #1be9b5; /* Neon green border */
+  color: #1be9b5; /* Neon green text */
+  transition: transform 0.2s; /* Animation effect */
+  text-shadow: 0 0 5px #1be9b5;
+}
+
+input[type="text"]:focus {
+  transform: scale(1.05); /* Zoom in effect when focused */
 }
 
 .button {
-  background-color: #f58427;
+  background-color: #f52787;
   color: white;
   text-align: center;
   font-weight: bold;
@@ -42,12 +74,61 @@ input[type="text"] {
   font-size: 14px;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s; /* Animation effect */
+}
+
+.button:hover {
+  background-color: #25fcbb; /* Neon green when hovered */
+  transform: scale(1.05); /* Zoom in effect when hovered */
+}
+
+.network-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c3e50; /* Cobalt blue */
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.metamask-warning {
+  background-color: #2a2a72; /* dark cobalt blue */
+  color: #4fffb6; /* neon font color */
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #8c8cff; /* neon glow effect */
+  text-align: center;
+  margin-top: 20px; /* space above the warning */
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* space between the warning and the network selector */
+}
+
+.network-selector select {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #2a2a72; /* dark cobalt blue */
+  color: #8c8cff; /* neon font color */
+  box-shadow: 0 0 10px #8c8cff; /* neon glow effect */
+}
+
+select {
+  background-color: #34495e; /* Slightly darker blue for dropdown */
+  color: #8e44ad; /* Neon purple for text */
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .existing-contract ul {
   padding: 10px;
   margin: 20px;
-  background-color: #eee;
+  background-color: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
 }
 
 .existing-contract ul > li {
@@ -65,6 +146,7 @@ input[type="text"] {
 }
 
 .existing-contract .complete {
-  color: #5aa75a;
+  color: #d6f5da;
   text-align: center;
+  text-shadow: 0 0 5px #1be9b5, 0 0 10px #1be9b5, 0 0 15px #28db90, 0 0 20px #00ff55, 0 0 25px #00ff73, 0 0 30px #00ff55, 0 0 35px #00ff2a;
 }
